@@ -3,14 +3,14 @@ from datetime import datetime
 
 app = Flask(__name__)
 
-VERSION = "1.0"
+VERSION = "1.1"
 
 @app.route("/")
 def home():
     return render_template(
         "index.html",
         version=VERSION,
-        message="Bienvenue dans le TP DevOps !",
+        message="Nouvelle version déployée automatiquement avec Jenkins + Docker !",
         date=datetime.now().strftime("%d/%m/%Y %H:%M:%S")
     )
 
